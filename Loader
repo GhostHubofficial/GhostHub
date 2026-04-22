@@ -1,10 +1,11 @@
 local ALLOWED = {
-    [95630541662383] = true, -- World Fighter
+    [95630541662383] = "https://raw.githubusercontent.com/GhostHubofficial/qwejadsfna/refs/heads/main/WFS",
 }
 
-if not ALLOWED[game.PlaceId] then
+local url = ALLOWED[game.PlaceId]
+if not url then
     warn("Script does not support this game.")
     return
 end
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostHubofficial/qwejadsfna/refs/heads/main/WFS"))()
+loadstring(game:HttpGet(url))()
