@@ -1,0 +1,10 @@
+local ALLOWED = {
+    [95630541662383] = true, -- World Fighter
+}
+
+if not ALLOWED[game.PlaceId] then
+    warn("Script does not support this game.")
+    return
+end
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostHubofficial/qwejadsfna/refs/heads/main/WFS"))()
